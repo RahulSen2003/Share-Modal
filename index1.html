@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Share Modal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        *{
+            overflow-y: hidden;
+        }
+        .red-circle{
+            box-shadow: 0 0 20px gray;
+            animation-name: white;
+            animation-duration: 3s;
+            animation-iteration-count: infinite;
+            animation-delay: 1s;
+        }
+            @keyframes white{
+                0%{
+                    transform: translateX(0px);
+                }
+                50%{
+                    transform: translateX(10px);
+                }
+                100%{
+                    transform: translateX(0px);
+                }
+            }
+        .purple-circle{
+            box-shadow: 0 0 20px blue;
+            animation-name: purple;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+            @keyframes purple{
+                0%{
+                    transform: translateX(0px);
+                }
+                50%{
+                    transform: translateX(10px);
+                }
+                100%{
+                    transform: translateX(0px);
+                }
+            }
+            .facebook{
+                color:rgb(68, 68, 211);
+            }
+            .twitter{
+                color:rgb(48, 154, 189);
+            }
+            .instagram{
+                color: rgb(233, 70, 98);
+            }
+            .whatsapp{
+                color: rgb(12, 123, 12);
+            }
+            .telegram{
+                color: rgb(77, 77, 228);
+            }
+            #Modal{
+                display: none;
+            }
+    </style>
+</head>
+<body>
+    <div class="w-[100vw] h-[100vh] relative  bg-blue-200 flex justify-center items-center">
+        <div class="h-[100px] w-[100px] absolute bg-white left-[450px] top-[40px] rounded-full red-circle opacity-80"></div>
+        <div class="h-[150px] w-[150px] absolute bg-blue-500 right-[450px] bottom-[25px] rounded-full purple-circle opacity-80"></div>
+        <div class="flex flex-col bg-blue-950 rounded-lg p-8 pt-12 pb-12 gap-4">
+            <div class="m-auto">
+                <img src="WhatsApp Image 2023-08-02 at 10.49.09 AM.jpeg" alt="" class="h-[130px] w-[130px] object-cover rounded-full">
+            </div>
+            <div class="text-white font-bold text-[25px] m-auto">Rahul Sen</div>
+            <div class="text-white m-auto">Student, LNCT&S</div>
+            <div class="m-auto">
+                <button id="OpenModal" class="text-white border rounded-sm pl-2 pr-2">Share my profile</button>
+                <button class="text-white border rounded-sm pl-7 pr-7">Follow me</button>
+            </div>
+        </div>
+    </div>
+    <div id="Modal" class="bg-blue-900 h-[150px] w-[400px] m-auto relative rounded-lg -top-80">
+        <div class="flex justify-between border-b-2 ml-2 mr-2 mb-2 pt-3 pb-2">
+            <h1 class="text-white text-[20px] font-bold">Share My Profile</h1>
+            <button id="CloseModal" class="text-white"><i class="fa-solid fa-xmark class"></i></button>
+        </div>
+        <div class="text-white ml-2 mt-2">Share this via</div>
+        <div class="mt-4 ml-2">
+            <a href="" class="m-5 facebook"><i class="fa-brands fa-facebook fa-2x"></i></a>
+            <a href="" class="m-5 twitter"><i class="fa-brands fa-twitter fa-2x"></i></a>
+            <a href="" class="m-5 instagram"><i class="fa-brands fa-instagram fa-2x"></i></a>
+            <a href="" class="m-5 whatsapp"><i class="fa-brands fa-whatsapp fa-2x"></i></a>
+            <a href="" class="m-5 telegram"><i class="fa-brands fa-telegram fa-2x"></i></a>
+        </div>
+    </div>
+    <script src="https://kit.fontawesome.com/58a810656e.js" crossorigin="'anonymous"></script>
+    <script src="script1.js"></script>
+</body>
+</html>
